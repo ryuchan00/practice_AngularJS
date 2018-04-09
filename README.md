@@ -5,4 +5,8 @@
 ```bash
 $ npm install angular@1.6.9
 angular@1.6.9 node_modules/angular
+# angular-messages
+$npm install angular-messages
+# angular-cookies
+$ npm install angular-cookies
 ```
