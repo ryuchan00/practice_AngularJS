@@ -11,7 +11,8 @@
   "devDependencies": {
     "angular": "^1.6.9",
     "angular-cookies": "^1.6.9",
-    "angular-messages": "^1.6.9"
+    "angular-messages": "^1.6.9",
+    "angular-sanitize": "^1.6.9"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
