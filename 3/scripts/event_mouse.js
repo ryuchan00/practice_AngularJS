@@ -4,7 +4,8 @@ angular.module('myApp', [])
         $scope.path = 'http://www.web-deli.com/image/linkbanner_l.gif';
 
         // 画像にマウスポインターが乗った時
-        $scope.onmouseenter = function () {
+        $scope.onmouseenter = function ($event) {
+            console.log($event);
             $scope.path = 'http://www.web-deli.com/image/home_chara.gif';
         };
 

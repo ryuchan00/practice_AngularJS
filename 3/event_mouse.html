@@ -7,6 +7,6 @@
     <script src="scripts/event_mouse.js"></script>
 </head>
 <body ng-controller="MyController">
-<img ng-src="{{path}}" lat="ロゴ画像" ng-mouseenter="onmouseenter()" ng-mouseleave="onmouseleave()"/>
+<img ng-src="{{path}}" lat="ロゴ画像" ng-mouseenter="onmouseenter($event)" ng-mouseleave="onmouseleave()"/>
 </body>
 </html>
