@@ -1,0 +1,14 @@
+.back {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.chara {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.space {
+    margin: 15px;
+    padding: 15px;
+}
