@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="myApp" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>AngularJS</title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="scripts/if.js"></script>
+</head>
+<body ng-controller="MyController">
+<form>
+    <label for="show">表示／非表示：</label>
+    <input id="show" type="checkbox" ng-model="show"/>
+    <button ng-click="onclick()">背景反転</button>
+</form>
+<div id="panel" class="panel panel-default" ng-if="show">
+    <p>WINGSプロジェクトは、当初、ライター山田...</p>
+</div>
+</body>
+</html>
