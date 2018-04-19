@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>AngularJS</title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="scripts/repeat_obj.js"></script>
+</head>
+<body ng-controller="MyController">
+<table class="table">
+    <!--(キー変数,値変数) in オブジェクト-->
+    <tr ng-repeat="(key, value) in author">
+        <th>{{key}}</th>
+        <th>{{value}}</th>
+    </tr>
+</table>
+</body>
+</html>
