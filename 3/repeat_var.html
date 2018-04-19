@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>AngularJS</title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="scripts/repeat_var.js"></script>
+</head>
+<body ng-controller="MyController">
+<table class="table">
+    <tr>
+        <th>値</th>
+        <th>$index</th>
+        <th>$first</th>
+        <th>$middle</th>
+        <th>$last</th>
+        <th>$odd</th>
+        <th>$even</th>
+    </tr>
+    <tr ng-repeat="value in years">
+        <th>{{value}}</th>
+        <th>{{$index}}</th>
+        <th>{{$first ? '○' : 'ー'}}</th>
+        <th>{{$middle ? '○' : 'ー'}}</th>
+        <th>{{$last ? '○' : 'ー'}}</th>
+        <th>{{$odd ? '○' : 'ー'}}</th>
+        <th>{{$even ? '○' : 'ー'}}</th>
+    </tr>
+</table>
+</body>
+</html>
