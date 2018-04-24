@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>AngularJS</title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="scripts/checked.js"></script>
+</head>
+<body ng-controller="MyController">
+<div>
+    <label><input type="checkbox" name="all" ng-model="all" ng-change="onchange()"/>全てチェック</label><br>
+    <!--書籍情報のリストを生成-->
+    <label ng-repeat-start="book in books"><input type="checkbox" ng-model="data.book[book.isbn]" ng-checked="all"
+                                                  ng-true-value="true" ng-false-value="false"
+                                                  id="isbn{{book.isbn}}" name="book{{book.name}}"/>{{book.title}}</label>
+    <br ng-repeat-end/>
+</div>
+選択させた値:{{data.book}}
+</body>
+</html>
