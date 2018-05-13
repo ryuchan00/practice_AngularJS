@@ -47,7 +47,8 @@
         <span ng-show="myForm.memo.$error.maxlength">備考は10文字以内で入力してください。
         </span>
         <div>
-            <input type="submit" value="登録" ng-disabled="myForm.$invalid"/>
+            <input type="submit" value="登録" ng-disabled="myForm.$invalid || myForm.$submitted"/>
+            <input type="reset" value="リセット" ng-disabled="myForm.$pristine"/>
         </div>
     </div>
 </form>

@@ -12,3 +12,11 @@
     margin: 15px;
     padding: 15px;
 }
+
+input.ng-invalid {
+    background-color: #fee
+}
+
+input.ng-dirty.ng-invalid {
+    background-color: #fee
+}
