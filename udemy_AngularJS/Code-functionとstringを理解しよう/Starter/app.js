@@ -1,9 +1,5 @@
-var myApp = angular.module('myApp', []);
+let myApp = angular.module('myApp', ['ngMessages']); // moduleの第二引数には依存するモジュールを入れる
+// この場合は、'ngMessages'というモジュールに依存してるよ!!とAngularJSに教えている
 
-myApp.controller('mainController', function ($scope, $log, $filter) {
-    $scope.name = 'Ken';
-    $scope.formattedName = $filter('uppercase')($scope.name);
-
-    $log.info($scope.name);
-    $log.info($scope.formattedName);
+myApp.controller('mainController', function () {
 });

@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
 
     <!-- bootstrapとfontawesomeをCDNから取得 -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <style>
         html,
         body {
@@ -16,31 +16,43 @@
     </style>
 
     <!-- angularをCDNから取得 -->
-    <script src="//code.angularjs.org/1.5.0/angular.min.js"></script>
+    <script src="//code.angularjs.org/1.7.0/angular.min.js"></script>
+    <!--これがmoduleの読み込み-->
+    <script src="//code.angularjs.org/1.7.0/angular-messages.min.js"></script>
     <script src="app.js"></script>
 </head>
 
 <body>
 
-    <header>
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">AngularJS</a>
-                </div>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                </ul>
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">AngularJS</a>
             </div>
-        </nav>
-    </header>
 
-    <div class="container">
-        <div ng-controller="mainController">
-            <h1>こんにちわ！</h1>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+            </ul>
         </div>
+    </nav>
+</header>
+
+<div class="container">
+    <div ng-controller="mainController">
+        <form name="myForm">
+            <label>
+                メールアドレス:
+                <input type="email" ng-model="field" name="myField" required maxlength="15"/>
+            </label>
+            <div ng-messages="myForm.myField.$error" role="alert">
+                <div class="alert alert-danger" ng-message="required">未入力です</div>
+                <div ng-message="email">15文字以下でなければなりません</div>
+                <div ng-message="maxlength">15文字</div>
+            </div>
+        </form>
     </div>
+</div>
 
 </body>
 
