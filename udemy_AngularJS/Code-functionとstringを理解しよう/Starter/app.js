@@ -1,13 +1,11 @@
 var myApp = angular.module('myApp', []);
 
 myApp.controller('mainController', function ($scope) {
-
+    console.log($scope);
 });
 
-let searchPeople = function (firstName, lastName, height, age, hobby) {
+let searchPeople = function ($scope, lastName, height, age, hobby) {
     return '山田　太郎'
 };
 
-searchPeopleString = searchPeople.toString();
-
-console.log(searchPeopleString);
+console.log(angular.injector().annotate(searchPeople));
