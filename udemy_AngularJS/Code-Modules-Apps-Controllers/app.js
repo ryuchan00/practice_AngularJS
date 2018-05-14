@@ -10,4 +10,4 @@ function logPerson() {
 let ken = new Person('Ken', 'Fukuyama');
 logPerson();
 console.log(ken.firstName);
-console.log(ken.lastName);
+console.log(ken.lastName);　
