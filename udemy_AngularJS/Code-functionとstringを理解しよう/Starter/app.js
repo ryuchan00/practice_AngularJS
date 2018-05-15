@@ -1,6 +1,5 @@
-// 一つの配列でバラバラの型が入っているものは珍しくない
-let things = [1, '2', function () {
-    alert('アラート!');
-}];
+var myApp = angular.module('myApp', []);
 
-things[2]();
+myApp.controller('mainController', function ($scope, $log) {
+    $log.info($scope);
+});
