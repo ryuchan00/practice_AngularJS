@@ -9,3 +9,8 @@ myApp.controller('mainController', ['$scope', '$filter', function ($scope, $filt
 
 }]);
 
+var tb = document.getElementById("name");
+tb.addEventListener('keypress',
+    function (event) {
+        console.log('押されました');
+    });
