@@ -25,11 +25,17 @@ myApp.controller('mainController', ['$scope', '$log', function ($scope, $log) {
 
     $scope.name = 'Main';
 
+    $log.main = 'Mainで追加したプロパティ';
+    $log.log($log);
+
 }]);
 
 myApp.controller('secondController', ['$scope', '$log', '$routeParams', function ($scope, $log, $routeParams) {
 
     console.log($routeParams.num);
     $scope.num = $routeParams.num || 'hoge';
+
+    $log.second = 'Secondで追加したプロパティ';
+    $log.log($log);
 
 }]);
