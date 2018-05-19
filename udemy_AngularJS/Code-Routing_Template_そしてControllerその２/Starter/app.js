@@ -27,6 +27,8 @@ myApp.controller('mainController', ['$scope', '$log', function ($scope, $log) {
 
     $log.main = 'Mainで追加したプロパティ';
     $log.log($log);
+    // $scopeはシングルトン例外
+    $log.log($scope);
 
 }]);
 
@@ -37,5 +39,6 @@ myApp.controller('secondController', ['$scope', '$log', '$routeParams', function
 
     $log.second = 'Secondで追加したプロパティ';
     $log.log($log);
+    $log.log($scope);
 
 }]);
