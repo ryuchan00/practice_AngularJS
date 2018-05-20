@@ -1,0 +1,13 @@
+<label>検索</label>
+<input type="text" value="太郎">
+<h3>検索結果：</h3>
+<div class="list-group">
+    <!--コピーとてコンポーネントの再利用-->
+    <!--再利用をする上でメンテでメリットがある-->
+    <!--directiveがあることで再利用が容易になる-->
+    <!--実質どちらもsearch-resultのディレクティブ-->
+    <search-result></search-result>
+    <div search-result></div>
+    <div class="search-result"></div>
+    <!-- directive: search-result -->
+</div>
