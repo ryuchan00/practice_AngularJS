@@ -15,7 +15,7 @@ weatherApp.config(function ($routeProvider) {
             controller: 'forecastController'
         });
 
-})
+});
 
 // service
 weatherApp.service('cityService', function () {
@@ -42,7 +42,8 @@ weatherApp.controller('forecastController', ['$scope', '$resource', 'cityService
 
     $scope.city = cityService.city;
 
-    $scope.weatherAPI = $resource("https://samples.openweathermap.org/data/2.5/forecast/daily", {
+
+    $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast', {
         callback: 'JSON_CALLBACK'
     }, {
         get: {
@@ -50,6 +51,12 @@ weatherApp.controller('forecastController', ['$scope', '$resource', 'cityService
         }
     });
 
-    $scope.weatherResult = $scope.weatherAPI.get();
+    $scope.weatherResult = $scope.weatherAPI.get({
+        q: $scope.city,
+        cnt: 2,
+        appid: key
+    });
+
+    console.log($scope.weatherResult);
 
 }]);
