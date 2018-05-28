@@ -1,5 +1,6 @@
 // module
 var weatherApp = angular.module('weatherApp', ['ngRoute', 'ngResource']);
+let days = [2, 5, 7];
 
 // config
 weatherApp.config(function ($routeProvider) {
@@ -20,7 +21,7 @@ weatherApp.config(function ($routeProvider) {
             controller: 'forecastController'
         });
 
-})
+});
 
 // service
 weatherApp.service('cityService', function () {
@@ -45,7 +46,7 @@ weatherApp.controller('homeController', ['$scope', 'cityService', function ($sco
 weatherApp.controller('forecastController', ['$scope', '$resource', 'cityService', '$routeParams', function ($scope, $resource, cityService, $routeParams) {
 
     $scope.city = cityService.city;
-    $scope.days = $routeParams.days || 2;
+    $scope.days = $routeParams.days || '2';
 
     $scope.weatherAPI = $resource("http://api.openweathermap.org/data/2.5/forecast", {
         callback: 'JSON_CALLBACK'
