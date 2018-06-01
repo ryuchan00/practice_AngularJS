@@ -21,11 +21,16 @@ myApp.config(function ($routeProvider) {
 
 });
 
+// serviceはcontrollerに入れ込むコンポーネントなのかな
+// 多分そんな感じが一番捉えやすいと思う
 myApp.service('nameService', function () {
+    // ここではselfという変数に代入しているだけなのでそんなに構えなくても良さそう。
     let self = this;
     this.name = '山田　太郎';
 
     this.namelength = function () {
+        console.log(this);
+        // ここに入って来た時に、controller側でボンボン入れた変数が代入されていく。
         return self.name.length;
     };
 });
@@ -33,6 +38,7 @@ myApp.service('nameService', function () {
 myApp.controller('mainController', ['$scope', '$log', 'nameService', function ($scope, $log, nameService) {
 
     $scope.name = nameService.name;
+    nameService.last_name = 'Jiro';
 
     $scope.$watch('name', function (newVal) {
         nameService.name = newVal;
