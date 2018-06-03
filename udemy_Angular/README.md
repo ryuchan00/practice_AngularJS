@@ -1,0 +1,1 @@
+[【最新v5対応】はじめてのAngular入門 実践シングルページアプリケーション（SPA）構築 | Udemy](https://www.udemy.com/angular-ja/learn/v4/overview)
