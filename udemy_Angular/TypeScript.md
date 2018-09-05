@@ -20,7 +20,7 @@ const PI = Math.PI; // 3.14....
 
 ## 型キャストとテンプレート文字列
 
-```
+```ts
 function log(message: string) {
     return '渡された値は :' + message + 'です';
 }
@@ -50,7 +50,7 @@ alert(template3);
 
 返り値がない場合は、voidを指定する
 
-```
+```ts
 function hello(name: string): void {
   console.log(`Hello, ${name}!`);
 }
@@ -60,13 +60,13 @@ function hello(name: string): void {
 
 example
 
-```
+```ts
 let hello = (name: string): string => {
   retrun `Hello, ${name}!`;
 }
 ```
 
-```
+```ts
 // 引数に'?'をつけると省略可能になる
 // 
 function greet(name?: string = 'Taro'): string {
@@ -110,7 +110,7 @@ document.getElementById('button1').addEventListener('click', () => {
 
 # クラス
 
-```
+```ts
 class Animal {
     age: number = 10
 
@@ -129,7 +129,7 @@ dog.cry(); // legs: 4
 
 ここでキモになるのが、constructorの代入。JavaScriptでは次のように解釈される。
 
-```
+```ts
     function Animal(isCry, legs) {
         this.isCry = isCry;
         this.legs = legs;
@@ -139,7 +139,7 @@ dog.cry(); // legs: 4
 
 TSは、privateメソッドに対してもgetter,setterが提供されている。
 
-```
+```ts
 class Animal {
 
     private _age: number = 10
@@ -168,7 +168,7 @@ dog.age = -1; // Uncaught Error: 年齢は0以上でなければなりません
 
 # クラスの継承を理解しよう
 
-```
+```ts
 class Animal {
     age: number = 10
 
@@ -198,7 +198,7 @@ dog.cry();
 
 クラスの管理を楽にする仕組み。
 
-```
+```ts
 class NumberStore {
     data: number;
 }
