@@ -2,7 +2,7 @@
 
 ## 変数の宣言
 
-```
+```ts
 var box;
 
 let box2;
